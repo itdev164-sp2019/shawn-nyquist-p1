@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -14,7 +15,7 @@ export default class Button extends Component {
             <Container>
                 <Row className="Button-Row">
                     <Col>
-                        <a href="./Pages/select"><SelectButton /></a>
+                        <SelectButton><Link to='/selectButton'></Link></SelectButton>
                     </Col>
                     <Col>
                         <a href="./Pages/random"><RandomButton /></a>
