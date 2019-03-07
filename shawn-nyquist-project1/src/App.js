@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/Button';
-//import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
-import Image from 'react-bootstrap/Image';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import picture from './components/Images/mugtransparent.png'
+import { BrowserRouter, Route} from "react-router-dom";
+import RandomPage from './Pages/random';
+import SelectionPage from './Pages/select';
+import Button from './components/Button/button'
 
 import './App.css';
 
@@ -14,32 +11,16 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          Sup
+          Beer Selector 2000
+          <a href="/" className="HomeLink">Home</a>
         </header>
-        <div className="PictureRow">
-          <Container>
-          <Row>
-            <Col>
-              <Image src={ picture } rounded className="Pictures"/>
-            </Col>
-            <Col>
-              <Image src={ picture } className="Pictures"/>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={6} md={4}>
-              <Image src={ picture } rounded className="Pictures"/>
-            </Col>
-            <Col xs={6} md={4}>
-              <Image src={ picture } thumbnail className="Pictures"/>
-            </Col>
-          </Row>
-        </Container>
-        </div>
+        <Button />
         
+    
       </div>   
     );
   }
 }
 
 export default App;
+
